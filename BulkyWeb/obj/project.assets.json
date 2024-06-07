@@ -12706,11 +12706,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\desjm\\Source\\Repos\\ASP.NET-Core-MVC-NET-8\\Bulky\\BulkyWeb\\BulkyBookWeb.csproj",
+      "projectUniqueName": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\BulkyWeb\\BulkyBookWeb.csproj",
       "projectName": "BulkyBookWeb",
-      "projectPath": "D:\\Users\\desjm\\Source\\Repos\\ASP.NET-Core-MVC-NET-8\\Bulky\\BulkyWeb\\BulkyBookWeb.csproj",
+      "projectPath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\BulkyWeb\\BulkyBookWeb.csproj",
       "packagesPath": "C:\\Users\\desjm\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\desjm\\Source\\Repos\\ASP.NET-Core-MVC-NET-8\\Bulky\\BulkyWeb\\obj\\",
+      "outputPath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\BulkyWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -12733,8 +12733,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Users\\desjm\\Source\\Repos\\ASP.NET-Core-MVC-NET-8\\Bulky\\Bulky.DataAccess\\BulkyBook.DataAccess.csproj": {
-              "projectPath": "D:\\Users\\desjm\\Source\\Repos\\ASP.NET-Core-MVC-NET-8\\Bulky\\Bulky.DataAccess\\BulkyBook.DataAccess.csproj"
+            "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\Bulky.DataAccess\\BulkyBook.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\Bulky.DataAccess\\BulkyBook.DataAccess.csproj"
             }
           }
         }
