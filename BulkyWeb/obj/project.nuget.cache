@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "agkqUlKixdons8VgLi5dSgn753aEWj4GXIJ78pNrv/8JBvkPIoimtnnreErV9eEazTy19s2baiRx6VAnufDkHQ==",
+  "dgSpecHash": "wDyRDN4EyKxr/ig+0vlEudK2vYfweIj3AVR5M0ur4oAIYsmNZNhI+rWsi9Tp4sXwg3EU5U7pQfG9p/TJahGUKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\BulkyWeb\\BulkyBookWeb.csproj",
+  "projectFilePath": "C:\\Users\\desjm\\Source\\Repos\\KaiserinDerWelt\\Huellitastoday\\BulkyWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\desjm\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\desjm\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

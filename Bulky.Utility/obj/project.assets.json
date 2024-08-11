@@ -869,11 +869,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\Bulky.Utility\\BulkyBook.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\desjm\\Source\\Repos\\KaiserinDerWelt\\Huellitastoday\\Bulky.Utility\\BulkyBook.Utility.csproj",
       "projectName": "BulkyBook.Utility",
-      "projectPath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\Bulky.Utility\\BulkyBook.Utility.csproj",
+      "projectPath": "C:\\Users\\desjm\\Source\\Repos\\KaiserinDerWelt\\Huellitastoday\\Bulky.Utility\\BulkyBook.Utility.csproj",
       "packagesPath": "C:\\Users\\desjm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\desjm\\Source\\Repos\\Huellitastoday\\Bulky.Utility\\obj\\",
+      "outputPath": "C:\\Users\\desjm\\Source\\Repos\\KaiserinDerWelt\\Huellitastoday\\Bulky.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
