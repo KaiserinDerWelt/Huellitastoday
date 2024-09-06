@@ -1,20 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
-    "\\Bulky.DataAccess",
-    "\\Bulky.DataAccess\\DbInitializer",
+    "\\Bulky.DataAccess\\Repository",
     "\\BulkyWeb",
     "\\BulkyWeb\\Areas",
-    "\\BulkyWeb\\Areas\\Customer",
     "\\BulkyWeb\\Areas\\Customer\\Views",
-    "\\BulkyWeb\\Areas\\Customer\\Views\\Cart"
+    "\\BulkyWeb\\Areas\\Identity",
+    "\\BulkyWeb\\Areas\\Identity\\Pages",
+    "\\BulkyWeb\\Areas\\Identity\\Pages\\Account",
+    "\\BulkyWeb\\wwwroot\\js"
   ],
-  "SelectedNode": "\\BulkyWeb\\Areas\\Customer\\Views\\Cart\\Index.cshtml",
-=======
-    "\\BulkyWeb"
-  ],
-  "SelectedNode": "\\Bulky.sln",
->>>>>>> 311b2dded96267fb815c962e86b2feac468e3659
+  "SelectedNode": "\\BulkyWeb\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

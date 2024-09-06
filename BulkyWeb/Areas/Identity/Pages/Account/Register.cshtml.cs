@@ -106,7 +106,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
             public string ConfirmPassword { get; set; }
 
             public string? Role { get; set; }
@@ -247,7 +247,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
         {
             if (!_userManager.SupportsUserEmail)
             {
-                throw new NotSupportedException("The default UI requires a user store with email support.");
+                throw new NotSupportedException("La interfaz de usuario predeterminada requiere una tienda de usuarios con soporte de correo electrónico.");
             }
             return (IUserEmailStore<IdentityUser>)_userStore;
         }
