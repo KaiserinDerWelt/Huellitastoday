@@ -9,10 +9,10 @@ namespace BulkyBook.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(30)]
-        [DisplayName("Category Name")]
+        [DisplayName("Nombre de la Categoria")]
         public string Name { get; set; }
-        [DisplayName("Display Order")]
-        [Range(1, 100, ErrorMessage = "Display Order must be between 1-100")]
+        [DisplayName("Mostrar orden")]
+        [Range(1, 100, ErrorMessage = "La orden debe ser entre 1 y 1000 piezas.")]
         public int DisplayOrder { get; set; }
     }
 }

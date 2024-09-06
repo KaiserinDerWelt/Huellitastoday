@@ -13,7 +13,7 @@ function loadDataTable() {
             { "data": "email", "width": "15%" },
             { "data": "phoneNumber", "width": "15%" },
             { "data": "company.name", "width": "15%" },
-            { "data": "role", "width": "15%" },
+            { "data": "rol", "width": "15%" },
             {
                 data: { id: "id", lockoutEnd: "lockoutEnd" },
                 "render": function (data) {
@@ -24,10 +24,10 @@ function loadDataTable() {
                         return `
                         <div class="text-center">
                              <a onclick=LockUnlock('${data.id}') class="btn btn-danger text-white" style="cursor:pointer; width:100px;">
-                                    <i class="bi bi-lock-fill"></i>  Lock
+                                    <i class="bi bi-lock-fill"></i>  Bloquear
                                 </a> 
                                 <a href="/admin/user/RoleManagment?userId=${data.id}" class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
-                                     <i class="bi bi-pencil-square"></i> Permission
+                                     <i class="bi bi-pencil-square"></i> Permisos
                                 </a>
                         </div>
                     `
@@ -36,10 +36,10 @@ function loadDataTable() {
                         return `
                         <div class="text-center">
                               <a onclick=LockUnlock('${data.id}') class="btn btn-success text-white" style="cursor:pointer; width:100px;">
-                                    <i class="bi bi-unlock-fill"></i>  UnLock
+                                    <i class="bi bi-unlock-fill"></i>  Desbloquear
                                 </a>
                                 <a href="/admin/user/RoleManagment?userId=${data.id}" class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
-                                     <i class="bi bi-pencil-square"></i> Permission
+                                     <i class="bi bi-pencil-square"></i> Permisos
                                 </a>
                         </div>
                     `
