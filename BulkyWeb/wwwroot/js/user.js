@@ -13,7 +13,7 @@ function loadDataTable() {
             { "data": "email", "width": "15%" },
             { "data": "phoneNumber", "width": "15%" },
             { "data": "company.name", "width": "15%" },
-            { "data": "roles", "width": "15%" },
+            { "data": "role", "width": "15%" },
             {
                 data: { id: "id", lockoutEnd: "lockoutEnd" },
                 "render": function (data) {
