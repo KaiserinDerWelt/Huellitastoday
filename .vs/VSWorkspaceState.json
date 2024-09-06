@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Bulky.DataAccess",
     "\\Bulky.DataAccess\\DbInitializer",
     "\\BulkyWeb",
@@ -10,5 +11,10 @@
     "\\BulkyWeb\\Areas\\Customer\\Views\\Cart"
   ],
   "SelectedNode": "\\BulkyWeb\\Areas\\Customer\\Views\\Cart\\Index.cshtml",
+=======
+    "\\BulkyWeb"
+  ],
+  "SelectedNode": "\\Bulky.sln",
+>>>>>>> 311b2dded96267fb815c962e86b2feac468e3659
   "PreviewInSolutionExplorer": false
 }
