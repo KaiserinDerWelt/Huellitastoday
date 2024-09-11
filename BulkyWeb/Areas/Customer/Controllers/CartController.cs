@@ -37,7 +37,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             ShoppingCartVM = new()
             {
                 ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId,
-                includeProperties: "Product"),
+                includeProperties: "Producto"),
                 OrderHeader = new()
             };
 
@@ -85,14 +85,14 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 		}
 
 		[HttpPost]
-		[ActionName("Summary")]
+		[ActionName("Resumen")]
 		public IActionResult SummaryPOST()
 		{
 			var claimsIdentity = (ClaimsIdentity)User.Identity;
 			var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
 			ShoppingCartVM.ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId,
-				includeProperties: "Product");
+				includeProperties: "Producto");
 
 			ShoppingCartVM.OrderHeader.OrderDate = System.DateTime.Now;
 			ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
@@ -108,13 +108,13 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
 			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
-				//it is a regular customer 
+				//cliente objetivo
 				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
 				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
 			}
 			else
 			{
-				//it is a company user
+				//Usuario de tipo empresa
 				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusDelayedPayment;
 				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusApproved;
 			}
@@ -136,8 +136,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
 				
-				//it is a regular customer account and we need to capture payment
-				//stripe logic
+				//Pasarela de pago con stripe
 				
 				var domain = Request.Scheme + "://" + Request.Host.Value + "/";
 				var options = new SessionCreateOptions
@@ -145,7 +144,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 					SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
 					CancelUrl = domain + "customer/cart/index",
 					LineItems = new List<SessionLineItemOptions>(),
-					Mode = "payment",
+					Mode = "pago",
 				};
 
 				foreach (var item in ShoppingCartVM.ShoppingCartList)
@@ -155,7 +154,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 						PriceData = new SessionLineItemPriceDataOptions
 						{
 							UnitAmount = (long)(item.Price * 100), // $20.50 => 2050
-							Currency = "usd",
+							Currency = "mxn", //Divisa en pesos mexicanos
 							ProductData = new SessionLineItemPriceDataProductDataOptions
 							{
 								Name = item.Product.Title
@@ -224,8 +223,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId);
             if (cartFromDb.Count <= 1)
 			{
-
-                //remove that from cart
+			 // Remover del carrito
 
                 _unitOfWork.ShoppingCart.Remove(cartFromDb);
                 HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart
