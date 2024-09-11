@@ -37,7 +37,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             ShoppingCartVM = new()
             {
                 ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId,
-                includeProperties: "Producto"),
+                includeProperties: "Product"),
                 OrderHeader = new()
             };
 
@@ -85,14 +85,14 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 		}
 
 		[HttpPost]
-		[ActionName("Resumen")]
+		[ActionName("Summary")]
 		public IActionResult SummaryPOST()
 		{
 			var claimsIdentity = (ClaimsIdentity)User.Identity;
 			var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
 			ShoppingCartVM.ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId,
-				includeProperties: "Producto");
+				includeProperties: "Product");
 
 			ShoppingCartVM.OrderHeader.OrderDate = System.DateTime.Now;
 			ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
@@ -144,7 +144,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 					SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
 					CancelUrl = domain + "customer/cart/index",
 					LineItems = new List<SessionLineItemOptions>(),
-					Mode = "pago",
+					Mode = "payment",
 				};
 
 				foreach (var item in ShoppingCartVM.ShoppingCartList)
@@ -154,7 +154,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 						PriceData = new SessionLineItemPriceDataOptions
 						{
 							UnitAmount = (long)(item.Price * 100), // $20.50 => 2050
-							Currency = "mxn", //Divisa en pesos mexicanos
+							Currency = "usd", //Divisa en pesos mexicanos
 							ProductData = new SessionLineItemPriceDataProductDataOptions
 							{
 								Name = item.Product.Title
