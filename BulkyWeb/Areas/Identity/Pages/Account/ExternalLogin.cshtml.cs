@@ -153,7 +153,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             var info = await _signInManager.GetExternalLoginInfoAsync();
             if (info == null)
             {
-                ErrorMessage = "Error loading external login information during confirmation.";
+                ErrorMessage = "Error al cargar información de inicio de sesión externa durante la confirmación.";
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
             }
 
@@ -170,7 +170,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                     result = await _userManager.AddLoginAsync(user, info);
                     if (result.Succeeded)
                     {
-                        _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
+                        _logger.LogInformation("El usuario creó una cuenta usando {Name} .", info.LoginProvider);
 
                         var userId = await _userManager.GetUserIdAsync(user);
                         var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -181,8 +181,8 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                             values: new { area = "Identity", userId = userId, code = code },
                             protocol: Request.Scheme);
 
-                        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        await _emailSender.SendEmailAsync(Input.Email, "Confirma tu email",
+                            $"Porfavor confirma tu cuenta haciendo click <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>aqui</a>.");
 
                         // If account confirmation is required, we need to show the link if we don't have a real email sender
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
@@ -223,7 +223,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
         {
             if (!_userManager.SupportsUserEmail)
             {
-                throw new NotSupportedException("The default UI requires a user store with email support.");
+                throw new NotSupportedException("La interfaz de usuario predeterminada requiere una tienda de usuarios con soporte de email.");
             }
             return (IUserEmailStore<IdentityUser>)_userStore;
         }

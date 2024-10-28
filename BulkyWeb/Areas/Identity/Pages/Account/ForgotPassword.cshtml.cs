@@ -72,8 +72,8 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Restablecer contraseña",
+                    $"Porfavor resetea tu contraseña <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clic aqui.</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
