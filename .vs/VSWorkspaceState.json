@@ -3,10 +3,13 @@
     "",
     "\\BulkyWeb",
     "\\BulkyWeb\\Areas",
-    "\\BulkyWeb\\Areas\\Customer",
     "\\BulkyWeb\\Areas\\Customer\\Controllers",
     "\\BulkyWeb\\Areas\\Customer\\Views",
-    "\\BulkyWeb\\Areas\\Customer\\Views\\Cart"
+    "\\BulkyWeb\\Areas\\Customer\\Views\\Cart",
+    "\\BulkyWeb\\Areas\\Identity",
+    "\\BulkyWeb\\Areas\\Identity\\Pages",
+    "\\BulkyWeb\\wwwroot\\css"
   ],
+  "SelectedNode": "\\BulkyWeb\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
   "PreviewInSolutionExplorer": false
 }
