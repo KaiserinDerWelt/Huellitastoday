@@ -60,14 +60,14 @@ namespace BulkyBook.DataAccess.DbInitializer
                     Email = "desanjuan.mariana@gmail.com",
                     Name = "Mariana Licona",
                     PhoneNumber = "491602679281",
-                    StreetAddress = "Insurgente ",
+                    StreetAddress = "Insurgente",
                     State = "CDMX",
                     PostalCode = "03100",
                     City = "CDMX"
                 }, "Admin123*" ).GetAwaiter().GetResult();
 
 
-                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnet.com");
+                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "desanjuan.mariana@gmail.com");
                 _userManager.AddToRoleAsync(user, SD.Role_Admin).GetAwaiter().GetResult();
 
             }
