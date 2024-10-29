@@ -69,7 +69,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Required]
             [EmailAddress]
-            [Display(Name = "New email")]
+            [Display(Name = "Nuevo email")]
             public string NewEmail { get; set; }
         }
 
@@ -91,7 +91,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"No se puede cargar el usuario con ID '{_userManager.GetUserId(User)}'.");
             }
 
             await LoadAsync(user);
@@ -103,7 +103,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"No se puede cargar el usuario con ID '{_userManager.GetUserId(User)}'.");
             }
 
             if (!ModelState.IsValid)
@@ -125,14 +125,14 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account.Manage
                     protocol: Request.Scheme);
                 await _emailSender.SendEmailAsync(
                     Input.NewEmail,
-                    "Confirm your email",
-                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Confirma tu correo electrónico",
+                    $"Por favor, confirme su cuenta mediante <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>click aqui</a>.");
 
-                StatusMessage = "Confirmation link to change email sent. Please check your email.";
+                StatusMessage = "Se ha enviado el enlace de confirmación para cambiar el correo electrónico. Por favor, revise su correo electrónico.";
                 return RedirectToPage();
             }
 
-            StatusMessage = "Your email is unchanged.";
+            StatusMessage = "Tu email no ha sido actualizado..";
             return RedirectToPage();
         }
 
