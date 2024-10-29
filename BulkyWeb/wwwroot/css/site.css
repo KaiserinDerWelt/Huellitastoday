@@ -22,7 +22,7 @@ a.navbar-brand {
 
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff;
+    color: #952985 !important;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
@@ -83,15 +83,15 @@ html {
 }
 
 .bg-primary {
-    background-color: deeppink !important;
+    background-color: #EFF0EA !important;
 }
 
 .bg-secondary {
-    background-color: deeppink !important;
+    background-color: #EFF0EA !important;
 }
 
 bg-success {
-    background-color: deeppink !important;
+    background-color: #EFF0EA !important;
 }
 
 

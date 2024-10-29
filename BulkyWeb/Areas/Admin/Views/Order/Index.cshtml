@@ -34,7 +34,7 @@
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Order List</h2>
+                <h2 class="text-white py-2">Lista de pedidos</h2>
             </div>
         </div>
     </div>
@@ -44,19 +44,19 @@
             <span></span>
             <ul class="list-group list-group-horizontal-sm">
                 <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
-                <li class="list-group-item @inprocess">In Process</li>
+                <li class="list-group-item @inprocess">En Proceso</li>
                 </a>
                 <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="pending">
-                <li class="list-group-item @pending">Payment Pending</li>
+                <li class="list-group-item @pending">Pago pendiente</li>
                 </a>
                 <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="completed">
-                <li class="list-group-item @completed">Completed</li>
+                <li class="list-group-item @completed">Completado</li>
                 </a>
                 <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="approved">
-                <li class="list-group-item @approved">Approved</li>
+                <li class="list-group-item @approved">Aprovado</li>
                 </a>
                 <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="all">
-                <li class="list-group-item @all">All</li>
+                <li class="list-group-item @all">Todo</li>
                 </a>
             </ul>
         </div>
@@ -65,10 +65,10 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
                     <th>Email</th>
-                    <th>Status</th>
+                    <th>Estado</th>
                     <th>Total</th>
                     <th></th>
                 </tr>
