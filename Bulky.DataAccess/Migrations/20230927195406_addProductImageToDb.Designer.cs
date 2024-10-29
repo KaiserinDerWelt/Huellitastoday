@@ -87,7 +87,7 @@ namespace BulkyBook.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("Teléfono")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostalCode")
