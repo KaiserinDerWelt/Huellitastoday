@@ -72,6 +72,21 @@ namespace BulkyBook.DataAccess.DbInitializer
 
             }
 
+            if (!_roleManager.RoleExistsAsync(SD.Role_Customer).GetAwaiter().GetResult())
+            {
+                var roles = new[] { SD.Role_Customer, SD.Role_Employee, SD.Role_Admin, SD.Role_Company };
+                foreach (var role in roles)
+                {
+                    var roleResult = _roleManager.CreateAsync(new IdentityRole(role)).GetAwaiter().GetResult();
+                    if (!roleResult.Succeeded)
+                    {
+                        // Maneja el error, por ejemplo, lanzando una excepción o registrándolo
+                        throw new Exception($"No se pudo crear el rol {role}");
+                    }
+                }
+            }
+
+
             return;
         }
     }
