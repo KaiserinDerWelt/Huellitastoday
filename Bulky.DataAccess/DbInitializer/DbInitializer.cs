@@ -64,7 +64,7 @@ namespace BulkyBook.DataAccess.DbInitializer
                     State = "CDMX",
                     PostalCode = "03100",
                     City = "CDMX"
-                }, "Perritos88*").GetAwaiter().GetResult();
+                }, "Admin123*" ).GetAwaiter().GetResult();
 
 
                 ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnet.com");
