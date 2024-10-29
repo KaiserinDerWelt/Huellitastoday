@@ -25,11 +25,14 @@ a.navbar-brand {
     color:#952985;
 }
 
+.navbar-nav {
+color: #952985 !important;
+}
 
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #000000 !important;
-    background-color: #000000;
+    color: #952985 !important;
+    background-color: #FFFFFF;
     border-color: #1861ac;
 }
 
@@ -555,3 +558,7 @@ bg-success {
         background-color: #578553;
         border-color: #578553;
     }
+
+.footer-text {
+    color: #952985
+}
