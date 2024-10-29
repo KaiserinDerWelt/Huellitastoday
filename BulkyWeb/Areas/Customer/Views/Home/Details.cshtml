@@ -15,8 +15,8 @@
             <div class="py-3">
                 <div class="row">
                     <div class="col-6 col-md-2 offset-lg-1 pb-1">
-                        <a asp-action="Index" class="btn btn-outline-primary bg-gradient mb-5 fw-semibold btn-sm text-uppercase">
-                            <small>Back to home</small>
+                        <a asp-action="Index" class="btn bg-gradient mb-5 fw-semibold btn-sm text-uppercase">
+                            <small>Volver al inicio</small>
                         </a>
                     </div>
                 </div>
@@ -73,11 +73,11 @@
                             <span class="badge">@Model.Product.Category.Name</span>
                         </div>
                         <div class="row ps-2">
-                            <h6 class="text-dark text-opacity-50 ">ISBN : @Model.Product.ISBN</h6>
+                            <h6 class="text-dark text-opacity-50 ">SKU : @Model.Product.ISBN</h6>
                         </div>
                         <div class="row ps-2">
                             <h6 class="text-dark text-opacity-50  pb-2">
-                                List Price:
+                                Precio de lista:
                                 <span class="text-decoration-line-through">
                                     @Model.Product.ListPrice.ToString("c")
                                 </span>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="row text-center ps-2">
                             <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
-                                <div class="text-dark text-opacity-50 fw-semibold">Quantity</div>
+                                <div class="text-dark text-opacity-50 fw-semibold">Cantidad</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
                                 <div class="text-dark text-opacity-50 fw-semibold">1-50</div>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="row text-center ps-2">
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>Price</div>
+                                <div>Precio</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
                                 <div>@Model.Product.Price.ToString("c")</div>
@@ -117,9 +117,9 @@
                         <div class="row pl-2 mb-3">
                             <div class="col-md-4">
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text bg-primary text-white border-0 fw-semibold"
+                                    <span class="input-group-text bg-primary text-dark border-0 fw-semibold" style="color:#000000"
                                           id="inputGroup-sizing-default">
-                                        Count
+                                        Unidades
                                     </span>
                                     <input asp-for="Count" type="number" value="1" class="form-control text-end"
                                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
@@ -130,8 +130,8 @@
                         <div class="row">
                             <div class="col-12 col-md-6 pb-1">
                                 <button type="submit"
-                                        class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
-                                    Add to Cart
+                                        class="btn text-dark  bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                                    Agregar al carrito
                                 </button>
                             </div>
                         </div>
