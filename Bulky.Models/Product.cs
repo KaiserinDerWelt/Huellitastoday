@@ -18,9 +18,14 @@ namespace BulkyBook.Models
         public string Description { get; set; }
 
         [Required]
+        [Display(Name = "SKU")]
         public string ISBN { get; set; }
+
         [Required]
+        [Display(Name = "Mascota")]
         public string Author { get; set; }
+
+
         [Required]
         [Display(Name = "Precio de lista")]
         [Range(1, 1000)]

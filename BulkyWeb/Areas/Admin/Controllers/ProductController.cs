@@ -132,7 +132,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
                 }
 
-                TempData["success"] = "Product created/updated successfully";
+                TempData["success"] = "Producto creado/actualizado exitosamente";
 
                 return RedirectToAction("Index");
             }
