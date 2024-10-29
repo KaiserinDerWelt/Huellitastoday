@@ -199,14 +199,14 @@
                             </div>
                             @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
                             {
-                                <button type="submit" asp-action="UpdateOrderDetail" class="btn btn-warning form-control my-1">Update Order Details</button>
+                                <button type="submit" asp-action="UpdateOrderDetail" class="btn btn-warning form-control my-1">Actualizar Detalles del Pedido</button>
                             }
                         </div>
                         <div class="col-12 col-lg-5 offset-lg-1">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="text-primary">Order Summary</span>
+                                <span class="text-primary">Resumen de la Orden</span>
                             </h4>
-                            <label class="btn btn-outline-primary form-control my-2">Order Status - @Model.OrderHeader.OrderStatus</label>
+                            <label class="btn btn-outline-primary form-control my-2">Estado de la Orden - @Model.OrderHeader.OrderStatus</label>
 
                             <ul class="list-group mb-3">
                                 @foreach (var detail in Model.OrderDetail)
@@ -216,8 +216,8 @@
                                             <div class="col-8">
 
                                                 <h6 class="my-0 text-primary">@detail.Product.Title</h6>
-                                                <small class="text-muted">Price : @detail.Price.ToString("c")</small><br />
-                                                <small class="text-muted">Quantity : @detail.Count</small>
+                                                <small class="text-muted">Previo : @detail.Price.ToString("c")</small><br />
+                                                <small class="text-muted">Cantidad : @detail.Count</small>
                                             </div>
                                             <div class="col-4 text-end">
                                                 <p class="text-success">@((detail.Count * detail.Price).ToString("c"))</p>
@@ -240,7 +240,7 @@
                             @if (Model.OrderHeader.PaymentStatus == SD.PaymentStatusDelayedPayment &&
                             Model.OrderHeader.OrderStatus == SD.StatusShipped)
                             {
-                                <button type="submit" class="btn btn-success form-control my-1">Pay Now</button>
+                                <button type="submit" class="btn btn-success form-control my-1">Pagar</button>
                             }
                             @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
                             {
@@ -251,7 +251,7 @@
                                     <button type="submit" asp-action="StartProcessing"
                                             class="btn btn-primary form-control my-1">
 
-                                        Start Processing
+                                        Iniciar procesamiento
 
                                     </button>
 
@@ -260,7 +260,7 @@
                                 @if (Model.OrderHeader.OrderStatus == SD.StatusInProcess)
                                 {
 
-                                    <button type="submit" asp-action="ShipOrder" onclick="return validateInput()" class="btn btn-primary form-control my-1">Ship Order</button>
+                                    <button type="submit" asp-action="ShipOrder" onclick="return validateInput()" class="btn btn-primary form-control my-1">Orden de envío</button>
 
 
                                 }
@@ -275,7 +275,7 @@
                                Model.OrderHeader.OrderStatus != SD.StatusShipped)
                                 {
 
-                                    <button asp-action="CancelOrder" type="submit" class="btn btn-danger form-control my-1">Cancel Order</button>
+                                    <button asp-action="CancelOrder" type="submit" class="btn btn-danger form-control my-1">Cancelar pedido</button>
 
                                 }
 
