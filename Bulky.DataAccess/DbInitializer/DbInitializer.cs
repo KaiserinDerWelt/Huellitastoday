@@ -56,8 +56,8 @@ namespace BulkyBook.DataAccess.DbInitializer
                 //if roles are not created, then we will create admin user as well
                 _userManager.CreateAsync(new ApplicationUser
                 {
-                    UserName = "desanjuan.mariana@gmail.com",
-                    Email = "desanjuan.mariana@gmail.com",
+                    UserName = "desanjuan@gmail.com",
+                    Email = "desanjuan@gmail.com",
                     Name = "Mariana Licona",
                     PhoneNumber = "491602679281",
                     StreetAddress = "Insurgente",
@@ -67,25 +67,10 @@ namespace BulkyBook.DataAccess.DbInitializer
                 }, "Admin123*" ).GetAwaiter().GetResult();
 
 
-                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "desanjuan.mariana@gmail.com");
+                ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "desanjuan@gmail.com");
                 _userManager.AddToRoleAsync(user, SD.Role_Admin).GetAwaiter().GetResult();
 
             }
-
-            if (!_roleManager.RoleExistsAsync(SD.Role_Customer).GetAwaiter().GetResult())
-            {
-                var roles = new[] { SD.Role_Customer, SD.Role_Employee, SD.Role_Admin, SD.Role_Company };
-                foreach (var role in roles)
-                {
-                    var roleResult = _roleManager.CreateAsync(new IdentityRole(role)).GetAwaiter().GetResult();
-                    if (!roleResult.Succeeded)
-                    {
-                        // Maneja el error, por ejemplo, lanzando una excepción o registrándolo
-                        throw new Exception($"No se pudo crear el rol {role}");
-                    }
-                }
-            }
-
 
             return;
         }
