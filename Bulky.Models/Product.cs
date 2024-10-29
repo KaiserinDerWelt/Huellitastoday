@@ -13,8 +13,12 @@ namespace BulkyBook.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
+        [Display(Name = "Titulo")]
         public string Title { get; set; }
+
+        [Display(Name = "Descripción")]
         public string Description { get; set; }
 
         [Required]
