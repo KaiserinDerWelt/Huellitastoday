@@ -60,7 +60,7 @@ namespace BulkyBook.DataAccess.DbInitializer
                     Email = "desanjuan.mariana@gmail.com",
                     Name = "Mariana Licona",
                     PhoneNumber = "491602679281",
-                    StreetAddress = "Insurgentes",
+                    StreetAddress = "Insurgente ",
                     State = "CDMX",
                     PostalCode = "03100",
                     City = "CDMX"
