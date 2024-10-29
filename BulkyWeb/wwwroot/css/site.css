@@ -29,6 +29,10 @@ a.navbar-brand {
 color: #952985 !important;
 }
 
+#logout {
+    color: #952985 !important;
+}
+
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #952985 !important;

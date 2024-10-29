@@ -73,16 +73,16 @@
                             <div class="col-6 col-md-3">
                                 @if (Model.Product.Id != 0)
                                 {
-                                    <button type="submit" class="btn btn-primary form-control">Update</button>
+                                    <button type="submit" class="btn btn-primary form-control">Actualizar</button>
                                 }
                                 else
                                 {
-                                    <button type="submit" class="btn btn-primary form-control">Create</button>
+                                    <button type="submit" class="btn btn-primary form-control">Crear</button>
                                 }
                             </div>
                             <div class="col-6 col-md-3">
-                                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border  form-control">
-                                    Back to List
+                                <a asp-controller="Product" asp-action="Index" class="btn form-control">
+                                    Volver a lista de productos
                                 </a>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 <img src="@image.ImageUrl" width="100%"
                                      style="border-radius:5px; border:1px solid #bbb9b9" />
                                 <a asp-action="DeleteImage" class="btn btn-danger" asp-route-imageId="@image.Id">
-                                    <i class="bi bi-trash-fill"></i> Delete
+                                    <i class="bi bi-trash-fill"></i> Borrar
                                 </a>
                             </div>
                         }
